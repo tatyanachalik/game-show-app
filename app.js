@@ -135,6 +135,7 @@ btnRestart.addEventListener('click', () => {
 
   for ( let i=0; i < btnLetter.length; i++){
     btnLetter[i].classList.remove('chosen');
+    btnLetter[i].removeAttribute('disabled');
   }
   
 });
