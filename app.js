@@ -3,6 +3,7 @@ const phrase = document.getElementById('phrase');
 const btnReset = document.querySelector('.btn__reset');
 const btnRestart = document.createElement('button');
 const overlay = document.getElementById('overlay');
+const title = document.querySelector('.title');
 const btnLetter = document.querySelectorAll('button');
 const heart = document.getElementsByClassName('tries');
 let missedTries = 0;
@@ -93,7 +94,7 @@ function checkWin() {
     
     if ( letter.length === show.length ) {
         overlay.className = 'win';
-        overlay.firstChild.textContent = 'You won!';
+        title.textContent = 'You won!';
         overlay.style.display = 'flex';
         // add a new button and button listener
         btnReset.style.display = "none";
@@ -105,7 +106,7 @@ function checkWin() {
 
     if ( missedTries > 4 ) {
         overlay.className = 'lose';
-        overlay.firstChild.textContent = 'You lost :(';
+        title.textContent = 'You lost :(';
         overlay.style.display = 'flex';
         // add a new button and button listener
         btnReset.style.display = "none";
