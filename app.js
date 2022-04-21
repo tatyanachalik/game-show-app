@@ -82,14 +82,14 @@ function checkLetter(buttonClicked) {
 }
 
 let getPhrase = getRandomPhraseAsArray(phrasesArray);
-console.log(getPhrase);
+// console.log(getPhrase);
 addPhraseToDisplay(getPhrase);
 
 function checkWin() {
   
     let letter = document.getElementsByClassName('letter');
     let show = document.getElementsByClassName('show');
-    console.log(letter.length, show.length);
+    // console.log(letter.length, show.length);
     
     if ( letter.length === show.length ) {
         overlay.className = 'win';
@@ -126,7 +126,7 @@ btnRestart.addEventListener('click', () => {
   removePhraseFromDisplay(getPhrase);
   getPhrase = getRandomPhraseAsArray(phrasesArray);
   addPhraseToDisplay(getPhrase);
-  console.log(getPhrase);
+  // console.log(getPhrase);
 
   for (let i=0; i < 5; i++){
     heart[i].firstChild.src = "images/liveHeart.png";
