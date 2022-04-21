@@ -86,6 +86,7 @@ console.log(getPhrase);
 addPhraseToDisplay(getPhrase);
 
 function checkWin() {
+  
     let letter = document.getElementsByClassName('letter');
     let show = document.getElementsByClassName('show');
     console.log(letter.length, show.length);
@@ -100,7 +101,6 @@ function checkWin() {
         btnRestart.className = 'btn__reset';
         overlay.appendChild(btnRestart);
         
-
     }
 
     if ( missedTries > 4 ) {
@@ -118,6 +118,8 @@ function checkWin() {
     
 }
 
+
+
 btnRestart.addEventListener('click', () => {
   overlay.style.display = "none";
   missedTries = 0; 
@@ -127,7 +129,7 @@ btnRestart.addEventListener('click', () => {
   console.log(getPhrase);
 
   for (let i=0; i < 5; i++){
-    heart[i].firstChild.style.display = 'initial';
+    heart[i].firstChild.src = "images/liveHeart.png";
   }
 
   for ( let i=0; i < btnLetter.length; i++){
@@ -147,10 +149,11 @@ for ( let i=0; i < btnLetter.length; i++) {
         if (checkLetter(btnLetter[i]) === 'null') {
           missedTries++;
           for (let i=0; i < missedTries; i++){
-          heart[i].firstChild.style.display = 'none';
+          heart[i].firstChild.src = "images/lostHeart.png";
           }
         }
-        checkWin();
+        // checkWin();
+        setTimeout( checkWin, 3500 );
     
        
     });
