@@ -146,6 +146,7 @@ for ( let i=0; i < btnLetter.length; i++) {
     btnLetter[i].addEventListener('click', () => {
        if (btnLetter[i].className !== 'chosen') {
         btnLetter[i].className = 'chosen';
+        btnLetter[i].disabled  = true;
        }
         if (checkLetter(btnLetter[i]) === 'null') {
           missedTries++;
@@ -153,8 +154,7 @@ for ( let i=0; i < btnLetter.length; i++) {
           heart[i].firstChild.src = "images/lostHeart.png";
           }
         }
-        // checkWin();
-        setTimeout( checkWin, 3500 );
+        checkWin();
     
        
     });
