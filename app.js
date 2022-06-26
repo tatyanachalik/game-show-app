@@ -95,7 +95,7 @@ function checkWin() {
     
     if ( letter.length === show.length ) {
         overlay.className = 'win';
-        title.textContent = 'Congratulations, You won!';
+        title.textContent = 'Congrats, You won!';
         about.textContent = 'Want to play again?'
         overlay.style.display = 'flex';
         // add a new button and button listener
