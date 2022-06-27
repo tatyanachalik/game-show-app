@@ -74,6 +74,7 @@ button {
 
 .header {
   color: var(--color-start);
+  margin-top: 80px;
 }
 
 /* Phrase */
@@ -175,4 +176,11 @@ button {
 
 .about {
   font-size: x-large;
+}
+
+@media (min-width: 1024 ) {
+  .header {
+    
+    margin-top: 0;
+  }
 }
